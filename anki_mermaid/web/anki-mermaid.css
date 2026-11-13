@@ -1,0 +1,105 @@
+/* Mermaid Diagrams for Anki */
+
+/* ---- Rendered diagram (cards and the editor preview) ---- */
+
+.anki-mermaid {
+    margin: 0.6em 0;
+}
+
+.anki-mermaid svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---- A block Mermaid could not draw: show the source as a code block ---- */
+
+.anki-mermaid.anki-mermaid-error {
+    text-align: left;
+    padding: 0.7em 1em;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 6px;
+    background: rgba(128, 128, 128, 0.16);
+}
+
+.anki-mermaid-code {
+    margin: 0;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 0.85em;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.anki-mermaid-message {
+    margin-top: 0.6em;
+    padding-top: 0.6em;
+    border-top: 1px solid rgba(128, 128, 128, 0.3);
+    color: #d1242f;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 0.75em;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.nightMode .anki-mermaid-message,
+.night_mode .anki-mermaid-message,
+.night-mode .anki-mermaid-message {
+    color: #ff7b72;
+}
+
+/* ---- Editor: shaded box behind each fenced block ---- */
+
+.anki-mermaid-boxes {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.anki-mermaid-box {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 6px;
+    background: rgba(128, 128, 128, 0.16);
+}
+
+/* ---- Editor: live preview beneath the field ---- */
+
+.anki-mermaid-preview {
+    margin-top: 6px;
+    padding-top: 2px;
+    border-top: 1px dashed rgba(128, 128, 128, 0.45);
+}
+
+.anki-mermaid-preview[hidden] {
+    display: none;
+}
+
+.anki-mermaid-figure + .anki-mermaid-figure {
+    border-top: 1px dashed rgba(128, 128, 128, 0.25);
+}
+
+.anki-mermaid-figure.is-stale .anki-mermaid svg {
+    opacity: 0.4;
+}
+
+.anki-mermaid-note {
+    margin: 0 0 0.6em;
+    color: var(--fg-subtle, #888);
+    font-size: 12px;
+}
+
+.anki-mermaid-note[hidden] {
+    display: none;
+}
+
+.anki-mermaid-note.is-error {
+    color: #d1242f;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.night-mode .anki-mermaid-note.is-error {
+    color: #ff7b72;
+}
